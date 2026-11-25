@@ -1,0 +1,86 @@
+district,fiscal_year,ftes,change_ftes,yoy_rate,source_type,source_id
+Allan Hancock,2020-21,101.34,,,Public observations,CDCP-2025
+Allan Hancock,2021-22,305.94,204.6,2.01894612196566,Public observations,CDCP-2025
+Allan Hancock,2022-23,336.64,30.7,0.10034647316467282,Public observations,CDCP-2025
+Allan Hancock,2023-24,391.8,55.16,0.16385456273764265,Public observations,CDCP-2025
+Allan Hancock,2024-25,267.05,-124.75,-0.3184022460439,Public observations,CDCP-2025
+Antelope Valley,2020-21,40.31,,,Public observations,CDCP-2025
+Antelope Valley,2021-22,40.03,-0.28,-0.006946167204167741,Public observations,CDCP-2025
+Antelope Valley,2022-23,54.1,14.07,0.35148638521109166,Public observations,CDCP-2025
+Antelope Valley,2023-24,50.06,-4.04,-0.07467652495378929,Public observations,CDCP-2025
+Antelope Valley,2024-25,73.51,23.45,0.4684378745505393,Public observations,CDCP-2025
+Barstow,2020-21,0.0,,,Public observations,CDCP-2025
+Barstow,2021-22,7.21,7.21,,Public observations,CDCP-2025
+Barstow,2022-23,8.16,0.95,0.13176144244105403,Public observations,CDCP-2025
+Barstow,2023-24,34.06,25.9,3.174019607843137,Public observations,CDCP-2025
+Barstow,2024-25,47.88,13.82,0.4057545507927187,Public observations,CDCP-2025
+Butte,2020-21,10.74,,,Public observations,CDCP-2025
+Butte,2021-22,19.58,8.84,0.8230912476722532,Public observations,CDCP-2025
+Butte,2022-23,26.3,6.72,0.34320735444330963,Public observations,CDCP-2025
+Butte,2023-24,25.48,-0.82,-0.03117870722433458,Public observations,CDCP-2025
+Butte,2024-25,31.61,6.13,0.2405808477237048,Public observations,CDCP-2025
+Cabrillo,2020-21,58.54,,,Public observations,CDCP-2025
+Cabrillo,2021-22,107.71,49.17,0.8399385035872906,Public observations,CDCP-2025
+Cabrillo,2022-23,120.38,12.67,0.11763067496054225,Public observations,CDCP-2025
+Cabrillo,2023-24,190.57,70.19,0.5830702774547267,Public observations,CDCP-2025
+Cabrillo,2024-25,211.82,21.25,0.1115075825156111,Public observations,CDCP-2025
+California statewide,2020-21,34640.22,,,Public observations,CDCP-2025
+California statewide,2021-22,37669.69,3029.47,0.08745527597688474,Public observations,CDCP-2025
+California statewide,2022-23,44950.15,7280.46,0.19327103567881765,Public observations,CDCP-2025
+California statewide,2023-24,51702.45,6752.3,0.1502175187402044,Public observations,CDCP-2025
+California statewide,2024-25,57973.64,6271.19,0.12129386518433849,Public observations,CDCP-2025
+Cerritos,2020-21,284.66,,,Public observations,CDCP-2025
+Cerritos,2021-22,277.0,-7.66,-0.0269092952996558,Public observations,CDCP-2025
+Cerritos,2022-23,281.88,4.88,0.017617328519855535,Public observations,CDCP-2025
+Cerritos,2023-24,349.77,67.89,0.24084716900808845,Public observations,CDCP-2025
+Cerritos,2024-25,418.17,68.4,0.1955570803670985,Public observations,CDCP-2025
+Chabot-Las Positas,2020-21,0.0,,,Public observations,CDCP-2025
+Chabot-Las Positas,2021-22,15.67,15.67,,Public observations,CDCP-2025
+Chabot-Las Positas,2022-23,52.82,37.15,2.370772176132738,Public observations,CDCP-2025
+Chabot-Las Positas,2023-24,90.4,37.58,0.7114729269216207,Public observations,CDCP-2025
+Chabot-Las Positas,2024-25,212.79,122.39,1.3538716814159288,Public observations,CDCP-2025
+Chaffey,2020-21,14.39,,,Public observations,CDCP-2025
+Chaffey,2021-22,169.57,155.18,10.783877692842252,Public observations,CDCP-2025
+Chaffey,2022-23,218.36,48.79,0.28772778203691707,Public observations,CDCP-2025
+Chaffey,2023-24,106.6,-111.76,-0.5118153507968493,Public observations,CDCP-2025
+Chaffey,2024-25,155.51,48.91,0.4588180112570357,Public observations,CDCP-2025
+Citrus,2020-21,68.43,,,Public observations,CDCP-2025
+Citrus,2021-22,59.92,-8.51,-0.12436066052900785,Public observations,CDCP-2025
+Citrus,2022-23,91.89,31.97,0.5335447263017357,Public observations,CDCP-2025
+Citrus,2023-24,110.6,18.71,0.203613015562085,Public observations,CDCP-2025
+Citrus,2024-25,101.5,-9.1,-0.08227848101265822,Public observations,CDCP-2025
+Coast,2020-21,267.67,,,Public observations,CDCP-2025
+Coast,2021-22,276.78,9.11,0.03403444539918543,Public observations,CDCP-2025
+Coast,2022-23,353.32,76.54,0.2765373220608427,Public observations,CDCP-2025
+Coast,2023-24,505.98,152.66,0.43207290841163815,Public observations,CDCP-2025
+Coast,2024-25,554.41,48.43,0.09571524566188372,Public observations,CDCP-2025
+Compton,2020-21,0.0,,,Public observations,CDCP-2025
+Compton,2021-22,0.0,0.0,,Public observations,CDCP-2025
+Compton,2022-23,33.23,33.23,,Public observations,CDCP-2025
+Compton,2023-24,40.33,7.1,0.21366235329521532,Public observations,CDCP-2025
+Compton,2024-25,39.88,-0.45,-0.011157946937763397,Public observations,CDCP-2025
+Contra Costa,2020-21,40.53,,,Public observations,CDCP-2025
+Contra Costa,2021-22,90.27,49.74,1.2272390821613617,Public observations,CDCP-2025
+Contra Costa,2022-23,127.61,37.34,0.4136479450537278,Public observations,CDCP-2025
+Contra Costa,2023-24,215.04,87.43,0.6851343938562808,Public observations,CDCP-2025
+Contra Costa,2024-25,247.97,32.93,0.15313430059523814,Public observations,CDCP-2025
+Copper Mountain,2020-21,0.0,,,Public observations,CDCP-2025
+Copper Mountain,2021-22,0.0,0.0,,Public observations,CDCP-2025
+Copper Mountain,2022-23,2.61,2.61,,Public observations,CDCP-2025
+Copper Mountain,2023-24,38.03,35.42,13.570881226053642,Public observations,CDCP-2025
+Copper Mountain,2024-25,56.16,18.13,0.47672889823823295,Public observations,CDCP-2025
+Desert,2020-21,773.2,,,Public observations,CDCP-2025
+Desert,2021-22,609.6,-163.6,-0.21158820486290741,Public observations,CDCP-2025
+Desert,2022-23,1058.0,448.4,0.7355643044619422,Public observations,CDCP-2025
+Desert,2023-24,781.94,-276.06,-0.26092627599243856,Public observations,CDCP-2025
+Desert,2024-25,673.85,-108.09,-0.1382331125150268,Public observations,CDCP-2025
+El Camino,2020-21,7.3,,,Public observations,CDCP-2025
+El Camino,2021-22,2.25,-5.05,-0.6917808219178082,Public observations,CDCP-2025
+El Camino,2022-23,3.85,1.6,0.7111111111111112,Public observations,CDCP-2025
+El Camino,2023-24,13.51,9.66,2.509090909090909,Public observations,CDCP-2025
+El Camino,2024-25,230.19,216.68,16.038490007401926,Public observations,CDCP-2025
+Feather River,2020-21,0.0,,,Public observations,CDCP-2025
+Feather River,2021-22,0.0,0.0,,Public observations,CDCP-2025
+Feather River,2022-23,0.0,0.0,,Public observations,CDCP-2025
+Feather River,2023-24,0.0,0.0,,Public observations,CDCP-2025
+Feather River,2024-25,0.0,0.0,,Public observations,CDCP-2025

@@ -2,12 +2,13 @@ import streamlit as st
 
 from analytics import ROOT, load, scenario
 from market import market
+from public_education import STATE, observations, public_findings
 
 st.set_page_config(page_title="Professional Education Analytics", layout="wide")
 st.title("Professional Education Analytics")
 page = st.sidebar.radio("Workspace", ["Portfolio", "Instructor recruitment", "Instructor services",
                                      "Qualitative insights", "Market intelligence", "Business case",
-                                     "Delivery & governance"])
+                                     "Delivery & governance", "Public education evidence"])
 st.header(page)
 
 if page in ("Portfolio", "Instructor recruitment", "Instructor services", "Qualitative insights"):
@@ -19,7 +20,25 @@ if page in ("Portfolio", "Instructor recruitment", "Instructor services", "Quali
     }
     st.info("No verified operational observations are available for this view.")
     st.write(needs[page])
+elif page == "Public education evidence":
+    cdcp, provider = observations()
+    findings = public_findings(cdcp,provider)
+    st.info("Public observations · California public agencies")
+    st.write(findings["state"])
+    district = st.selectbox("Select state or district", [STATE,*sorted(set(cdcp.district)-{STATE})])
+    selected = cdcp[cdcp.district.eq(district)]
+    st.subheader("Public noncredit CDCP FTES by fiscal year")
+    st.line_chart(selected.set_index("fiscal_year").ftes)
+    st.dataframe(selected,hide_index=True,width="stretch")
+    st.download_button("Download public FTES CSV",selected.to_csv(index=False),file_name="public-cdcp-ftes.csv")
+    st.subheader("Public Calbright headcount and awards")
+    st.write(findings["provider"])
+    st.caption("June 30 headcount and annual awards use different time grains. No completion rate is calculated.")
+    st.dataframe(provider,hide_index=True,width="stretch")
+    st.download_button("Download public outcomes CSV",provider.to_csv(index=False),file_name="public-calbright-outcomes.csv")
+    st.dataframe(load("education_sources"),hide_index=True,width="stretch")
 elif page == "Market intelligence":
+    st.subheader("Public Market Evidence")
     st.caption("Public data. BLS annual openings and California EDD decade totals have different units.")
     for frame, file in [(market(), "public-market.csv"), (load("sources"), "source-registry.csv")]:
         st.dataframe(frame, width="stretch")
@@ -37,7 +56,7 @@ elif page == "Business case":
     st.dataframe(market()[["candidate", "benchmark", "benchmark_usd"]])
 else:
     st.markdown((ROOT/"docs/governance.md").read_text(encoding="utf-8"))
-    for file in ("executive-summary.pdf", "integrated-report.pdf", "analysis-workbook.xlsx"):
+    for file in ("executive-summary.pdf", "integrated-report.pdf", "management-executive-brief.pdf", "public-education-case-study.pdf", "analysis-workbook.xlsx"):
         path = ROOT/"deliverables"/file
         if path.is_file():
             st.download_button(file, path.read_bytes(), file_name=file)

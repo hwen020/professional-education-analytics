@@ -9,11 +9,12 @@ from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, 
 
 from analytics import ROOT, load
 from market import demand_score, market
+from education_package import build_evidence, write_evidence
 
 OUT = ROOT / "deliverables"
 
 
-def pdf(path, pages):
+def pdf(path, pages, source=None):
     styles = getSampleStyleSheet()
     styles["BodyText"].fontSize = 11
     styles["BodyText"].leading = 16
@@ -37,7 +38,7 @@ def pdf(path, pages):
 
     def footer(canvas, document):
         canvas.setFont("Helvetica", 9)
-        canvas.drawString(72, 42, "Independent decision-support demonstration")
+        canvas.drawString(72, 42, source or "Independent decision-support demonstration")
         canvas.drawRightString(document.pagesize[0]-72, 42, str(document.page))
 
     SimpleDocTemplate(str(path), title=pages[0][0], author="Professional Education Analytics", invariant=True).build(
@@ -47,6 +48,7 @@ def pdf(path, pages):
 
 def main():
     OUT.mkdir(exist_ok=True)
+    build_evidence(pdf, OUT)
     evidence = market()
     ranks = demand_score()
     sources = load("sources")
@@ -167,6 +169,7 @@ def main():
         guide = book.add_worksheet("Read me")
         guide.write("A1","Public observations are on the market sheet. Demand summary is a summary table.")
         guide.write("A2","Blue scenario cells accept your own data. Background data remains blank until entered.")
+        write_evidence(writer)
 
 
 if __name__ == "__main__":
