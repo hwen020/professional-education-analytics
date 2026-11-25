@@ -1,0 +1,6 @@
+* text=auto
+*.pdf binary
+*.xlsx binary
+Dockerfile text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf

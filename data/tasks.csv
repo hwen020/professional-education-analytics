@@ -1,0 +1,6 @@
+Name,Description,Section,Owner role,Relative due day,Dependency,Priority
+Confirm market scope,Validate local evidence and employer signals,Evidence,Analyst,15,,P0
+Approve export,Sign off on access and data release,Controls,Privacy lead,20,Confirm market scope,P0
+Approve instructor readiness,Confirm contract and onboarding checklist,Readiness,Program manager,25,Approve export,P1
+Record pilot go or hold,Check reservations and cost ceiling,Decision,Director,30,Approve instructor readiness,P0
+Review pilot,Compare operational metrics and make continuation decision,Evaluation,Analyst,60,Record pilot go or hold,P1
