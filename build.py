@@ -40,7 +40,7 @@ def pdf(path, pages):
         canvas.drawString(72, 42, "Independent decision-support demonstration")
         canvas.drawRightString(document.pagesize[0]-72, 42, str(document.page))
 
-    SimpleDocTemplate(str(path), title=pages[0][0], author="Professional Education Analytics").build(
+    SimpleDocTemplate(str(path), title=pages[0][0], author="Professional Education Analytics", invariant=True).build(
         body, onFirstPage=footer, onLaterPages=footer)
 
 
@@ -104,6 +104,7 @@ def main():
     with pd.ExcelWriter(OUT/"analysis-workbook.xlsx", engine="xlsxwriter") as writer:
         book = writer.book
         book.set_calc_mode("auto")
+        book.set_properties({"created": pd.Timestamp(sources.retrieved.max()).to_pydatetime()})
         for name, frame in {"Public market":evidence,"Sources":sources,"Demand summary":ranks}.items():
             frame.to_excel(writer,sheet_name=name,index=False)
             ws = writer.sheets[name]
@@ -146,6 +147,17 @@ def main():
                           "values":"='Pilot inputs'!$C$6:$C$8"})
         chart.set_title({"name":"Contribution by paid-seat scenario"})
         ws.insert_chart("A11",chart)
+        matrix = book.add_worksheet("Price cost sensitivity")
+        matrix.set_column("A:F",20)
+        matrix.write_row("A1",["Alternative","Price per seat","Unit direct cost","Base seats","Fixed direct cost","Contribution"])
+        for i, label in enumerate(["Alternative A","Alternative B","Alternative C"], start=2):
+            matrix.write(f"A{i}",label)
+            matrix.write_blank(f"B{i}",None,entry)
+            matrix.write_blank(f"C{i}",None,entry)
+            matrix.write_formula(f"D{i}",'=IF(COUNT(\'Pilot inputs\'!B7),\'Pilot inputs\'!B7,"")',None,"")
+            matrix.write_formula(f"E{i}",'=IF(COUNT(\'Pilot inputs\'!B3),\'Pilot inputs\'!B3,"")',cash,"")
+            matrix.write_formula(f"F{i}",f'=IF(COUNT(B{i}:E{i})=4,(B{i}-C{i})*D{i}-E{i},"")',cash,"")
+        matrix.data_validation("B2:C4",{"validate":"decimal","criteria":">=","value":0})
         qa = book.add_worksheet("QA")
         qa.set_column("A:A",34)
         qa.write("A1","Missing SOC values")
